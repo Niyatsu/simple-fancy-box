@@ -60,12 +60,12 @@ main {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+  align-items: center;
 
   &-item {
     height: 150px; 
     margin: 0.5rem 1rem;
     cursor: pointer;
-    //display: none;
     &:hover {
       //border: 1px solid #fe53bb;
       box-shadow: 0px 0px 5px #f353bb;
@@ -74,8 +74,10 @@ main {
 
   &-images {
     display: flex;
-    align-content: space-between;
+    align-content: center;
     flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
   }
 
   &-popup{
