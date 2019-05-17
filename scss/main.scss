@@ -68,7 +68,7 @@ main {
     //display: none;
     &:hover {
       //border: 1px solid #fe53bb;
-      box-shadow: 0px 0px 3px #f353bb;
+      box-shadow: 0px 0px 5px #f353bb;
     }
   }
 
@@ -88,7 +88,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .fancy-box {
     height: auto;
     &-images {
