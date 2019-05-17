@@ -36,11 +36,16 @@ $(function() {
     }
 
     $('.fancy-caption').text(imgAlt);
-    $('.fancy-box-popup').show();
+
+    $('.fancy-box-popup, .fancy-box-overlay').animate({
+      'left': '0'
+    }, 500, 'swing');
   })
 
   $('.fancy-btn-close').click(function() {
-    $('.fancy-box-popup').hide();
+    $('.fancy-box-popup, .fancy-box-overlay').animate({
+      'left': '-2000px'
+    }, 300, 'swing');
     $('.fancy-popup-image').css({
       'width' : '0',
       'height': '0',
