@@ -14,6 +14,11 @@ $(function() {
           'width': '70vw',
           'height': 'auto'
         });
+      } else if ($(window).width() > 1200) {
+        popupImg.css({
+          'width': '60vw',
+          'height': 'auto'
+        });
       } else {
         popupImg.css({
           'width': '90vw',
