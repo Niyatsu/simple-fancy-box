@@ -9,8 +9,9 @@ $(function() {
     popupImg.prop('src', imgSource);
     if (imgWidth > imgHeight) {
       popupImg.css({
-        'width': '80%',
+        'width': '70vw',
         'height': 'auto'
+        
       });
     } else {
       popupImg.css({
