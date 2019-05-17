@@ -10,6 +10,7 @@ body {
   background-color: $bg-dark;
   font-family: $font-fam;
   line-height: 1.6;
+  text-shadow: $text-shadow;
 }
 
 header {
@@ -19,6 +20,7 @@ header {
   background-image: url('../img/header-bg.jpg');
   background-position: center;
   background-size: cover;
+  text-align: center;
   
   .container {
     height: 100vh;
@@ -29,10 +31,17 @@ header {
   }
 }
 
+main {
+  position: relative;
+  color: $text-light;
+  text-align: center;
+}
 .container {
   max-width: 1100px;
   display: flex;
+  flex-direction: column;
   margin: auto;
+  padding: 1rem;
 }
 
 .fancy-box{
@@ -45,17 +54,46 @@ header {
   &-item {
     height: 150px; 
     margin: 0.5rem 1rem;
+    cursor: pointer;
+    
+    &:hover {
+      //border: 1px solid #fe53bb;
+      box-shadow: 0px 0px 3px #f353bb;
+    }
   }
+
   &-images {
     display: flex;
+    align-content: space-between;
     flex-wrap: wrap;
   }
 
   &-popup{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
     display: none;
+    top: 0;
+    left: 0;
   }
+}
 
-  &-images {
-    border: 1px solid #000;
+@media only screen and (max-width: 768px) {
+  .fancy-box {
+    height: auto;
+    &-images {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    &-item {
+      width: 90%;
+      height: auto;
+    }
+
+    &-popup {
+      position: fixed;
+    }
   }
 }
