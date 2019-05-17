@@ -8,11 +8,19 @@ $(function() {
     
     popupImg.prop('src', imgSource);
     if (imgWidth > imgHeight) {
-      popupImg.css({
-        'width': '70vw',
-        'height': 'auto'
-        
-      });
+
+      if ($(window).width() > 768) {
+        popupImg.css({
+          'width': '70vw',
+          'height': 'auto'
+        });
+      } else {
+        popupImg.css({
+          'width': '90vw',
+          'height': 'auto'
+        });
+      }
+      
     } else {
       popupImg.css({
         'width' : 'auto',
